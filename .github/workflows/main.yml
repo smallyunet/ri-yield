@@ -3,6 +3,7 @@ name: Daily Crypto Investment Analysis
 on:
   schedule:
     - cron: "0 1 * * *"  # Runs at 01:00 UTC every day
+  workflow_dispatch:  # Allows manual triggering of the workflow
 
 jobs:
   build:
@@ -12,7 +13,7 @@ jobs:
     - name: Check out repository
       uses: actions/checkout@v2  # Use v2 or later
       with:
-        persist-credentials: true  # This is the default behavior and allows the bot to use the token
+        persist-credentials: true  # Allows the bot to use the token
 
     - name: Set up Python
       uses: actions/setup-python@v2
