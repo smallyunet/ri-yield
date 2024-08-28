@@ -1,0 +1,16 @@
+{
+  "version": "v1",
+  "coins": {
+      "BTC": 50,
+      "ETH": 10,
+      "LTC": 5,
+      "DOGE": 5,
+      "BCH": 5,
+      "ADA": 5,
+      "SOL": 5,
+      "FIL": 5,
+      "TON": 5,
+      "XEC": 3,
+      "DASH": 2
+  }
+}

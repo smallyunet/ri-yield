@@ -1,0 +1,47 @@
+name: Daily Crypto Investment Analysis
+
+on:
+  schedule:
+    - cron: "0 1 * * *"  # Runs at 01:00 UTC every day
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2  # Use v2 or later
+      with:
+        persist-credentials: true  # This is the default behavior and allows the bot to use the token
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+
+    - name: Run investment analysis script
+      run: python main.py
+
+    - name: Configure Git
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+
+    - name: Commit and push changes
+      run: |
+        git add *.json
+        git commit -m "Add daily crypto analysis results"
+        git push
+
+    - name: Upload price and yield files
+      uses: actions/upload-artifact@v2
+      with:
+        name: crypto-analysis-files
+        path: |
+          *.price.json
+          *.yield.json
