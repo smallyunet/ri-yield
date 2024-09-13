@@ -11,12 +11,12 @@ jobs:
 
     steps:
     - name: Check out repository
-      uses: actions/checkout@v2  # Use v2 or later
+      uses: actions/checkout@v4  # Use v2 or later
       with:
         persist-credentials: true  # Allows the bot to use the token
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
         python-version: '3.x'
 
@@ -40,7 +40,7 @@ jobs:
         git push
 
     - name: Upload price and yield files
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: crypto-analysis-files
         path: |
