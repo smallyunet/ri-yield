@@ -4,7 +4,7 @@ import os
 from datetime import datetime, timedelta
 
 # Load configuration file
-def load_config(config_file='config_v1.json'):
+def load_config(config_file='config_v1.1.json'):
     with open(config_file, 'r') as f:
         return json.load(f)
 
