@@ -60,6 +60,10 @@ def save_json(data, filename):
     with open(filename, 'w') as f:
         json.dump(data, f, indent=4)
 
+def update_quantities_based_on_coins(prev_quantities, new_coins):
+    updated_quantities = {coin: prev_quantities.get(coin, 0) for coin in new_coins}
+    return updated_quantities
+
 def main():
     # Load configuration
     config = load_config()
@@ -92,6 +96,8 @@ def main():
     else:
         prev_quantities = {coin: 0 for coin in coins}
         prev_total_investment = 0
+
+    prev_quantities = update_quantities_based_on_coins(prev_quantities, coins)
 
     # Calculate today's coin purchase quantities
     today_quantities = calculate_coin_quantity(prices, daily_investment, allocations)
