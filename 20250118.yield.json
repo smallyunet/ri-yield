@@ -1,0 +1,58 @@
+{
+    "date": "20250118",
+    "portfolio_value": 986.6550873377064,
+    "total_investment": 900,
+    "quantities": {
+        "BTC": {
+            "quantity": 0.004650773042097545,
+            "active": true,
+            "last_price": 104111.13
+        },
+        "ETH": {
+            "quantity": 0.027364435049070292,
+            "active": true,
+            "last_price": 3475.27
+        },
+        "LTC": {
+            "quantity": 0.41279576583628097,
+            "active": true,
+            "last_price": 137.07
+        },
+        "DOGE": {
+            "quantity": 127.24447133623936,
+            "active": true,
+            "last_price": 0.4155
+        },
+        "BCH": {
+            "quantity": 0.10048498974036339,
+            "active": true,
+            "last_price": 489.43
+        },
+        "ADA": {
+            "quantity": 45.05770380828745,
+            "active": true,
+            "last_price": 1.134
+        },
+        "SOL": {
+            "quantity": 0.23157591669972968,
+            "active": true,
+            "last_price": 219.57
+        },
+        "FIL": {
+            "quantity": 8.50470403399254,
+            "active": true,
+            "last_price": 5.833
+        },
+        "TON": {
+            "quantity": 8.326430575621554,
+            "active": true,
+            "last_price": 5.591
+        },
+        "XMR": {
+            "quantity": 0.21863659082431602,
+            "active": true,
+            "last_price": 231.54
+        }
+    },
+    "yield_rate": 1.0963
+}
